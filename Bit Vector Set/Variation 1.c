@@ -126,8 +126,7 @@ void display(unsigned char set){
     printf("{");
     int isfirst = 1;
     for(int i = 0; i < 8; i++){
-        unsigned char mask = 1 << i;
-        if(set & mask){
+        if(set & (1 << i)){
             if(!isfirst){
                 printf(", ");
             }
